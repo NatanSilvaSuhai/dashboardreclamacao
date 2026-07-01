@@ -1,0 +1,113 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 451.32760832348697,
+            "y": 0
+          },
+          "nodeIndex": "fato_caso",
+          "nodeLineageTag": "ddd2556f-6960-47fb-909c-91ea88b56dcc",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 816.9330679867885,
+            "y": 5.7142857142857153
+          },
+          "nodeIndex": "fato_caso_comentario",
+          "nodeLineageTag": "0479f4c1-0cf0-4f9f-8290-6e0ca53883ad",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 10.493633788680384,
+            "y": 28.731902699141546
+          },
+          "nodeIndex": "fato_caso_milestone",
+          "nodeLineageTag": "7506c5d3-8ec6-411e-803f-4f7d17737b21",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 437.8631210644628,
+            "y": 476.51665635285059
+          },
+          "nodeIndex": "dim_sf_usuario",
+          "nodeLineageTag": "7662ee65-8749-4908-adba-7b301205e5b6",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1119.1713368972498,
+            "y": 7.9489788131073169
+          },
+          "nodeIndex": "Medidas_Volumetria Geral (Protocolos e Tipos)",
+          "nodeLineageTag": "00b4e20d-d11f-4864-b456-d02b69a1a72b",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1117.9288835480284,
+            "y": 126.46807744706615
+          },
+          "nodeIndex": "Medidas_Procedência e Qualidade",
+          "nodeLineageTag": "df2c8ed4-0fec-4b7a-a1e8-80dc637f6801",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1120.2779180361995,
+            "y": 244.98717608102504
+          },
+          "nodeIndex": "Medidas_SLAs_PrazosResposta",
+          "nodeLineageTag": "976d02fe-427e-4bc2-9c71-3f57196c7904",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 55.68722742638986,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

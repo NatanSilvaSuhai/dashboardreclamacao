@@ -1,0 +1,44 @@
+table 'Medidas_Procedência e Qualidade'
+	lineageTag: df2c8ed4-0fec-4b7a-a1e8-80dc637f6801
+
+	measure 'Casos Procedentes' = ```
+			
+			CALCULATE(
+			    [Total Casos],
+			    fato_caso[des_procedencia] IN {"Valid/Accepted", "Procedente", "Valid"} 
+			)
+			```
+		formatString: #,0
+		lineageTag: 2eee1399-fc64-4996-8588-9d95298dae5a
+
+	measure 'Casos Improcedentes' = ```
+			
+			CALCULATE(
+			    [Total Casos],
+			    fato_caso[des_procedencia] IN {"Improcedente", "Invalid", "Rejected"} 
+			)
+			```
+		formatString: #,0
+		lineageTag: 63215cb5-6e0a-4690-94fb-c3c25431fa08
+
+	measure '% Procedencia' = DIVIDE([Casos Procedentes], [Total Casos], 0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: a8964d10-b4eb-4a17-8196-8c557c089f51
+
+	measure '% Improcedencia' = DIVIDE([Casos Improcedentes], [Total Casos], 0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 9d82b381-c284-4b68-bd4e-c10cdf738900
+
+	partition 'Medidas_Procedência e Qualidade' = m
+		mode: import
+		source =
+				let
+				  Origem = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Colunas Removidas" = Table.RemoveColumns(Origem,{"Coluna 1"})
+				in
+				  #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

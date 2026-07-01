@@ -1,0 +1,249 @@
+table fato_caso_milestone
+	lineageTag: 7506c5d3-8ec6-411e-803f-4f7d17737b21
+
+	column idt_caso_milestone
+		dataType: string
+		lineageTag: 60660268-8007-48e1-aecc-0fd4c95c09a1
+		summarizeBy: none
+		sourceColumn: idt_caso_milestone
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_caso
+		dataType: string
+		lineageTag: e08be7eb-2a11-4256-8283-325309ae9546
+		summarizeBy: none
+		sourceColumn: idt_caso
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_tipo_milestone
+		dataType: string
+		lineageTag: 6abba178-2e4f-4875-b8a3-de38d6b022fc
+		summarizeBy: none
+		sourceColumn: idt_tipo_milestone
+
+		annotation SummarizationSetBy = Automatic
+
+	column nom_tipo_milestone
+		dataType: string
+		lineageTag: 4502596b-3d4f-4b68-bca2-be935c804102
+		summarizeBy: none
+		sourceColumn: nom_tipo_milestone
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_horario_comercial
+		dataType: string
+		lineageTag: 2dc77d07-2f37-4f18-9dc0-3c80bb14eb7d
+		summarizeBy: none
+		sourceColumn: idt_horario_comercial
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_usuario_criacao
+		dataType: string
+		lineageTag: 75c835f3-7b64-4fce-9fc9-fc21c99efaaf
+		summarizeBy: none
+		sourceColumn: idt_usuario_criacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_usuario_modificacao
+		dataType: string
+		lineageTag: 2af89d0a-d341-4628-a0d5-1af93d4f1283
+		summarizeBy: none
+		sourceColumn: idt_usuario_modificacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtm_inicio
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 51a1b7fb-3740-4710-93ac-0754666021c5
+		summarizeBy: none
+		sourceColumn: dtm_inicio
+
+		variation Variation
+			isDefault
+			relationship: 1a71861c-813f-4023-8b15-472cc9b89d7c
+			defaultHierarchy: LocalDateTable_e3345fb9-e5a2-424b-96e2-a415fe71dde7.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtm_prazo
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 213f48cd-aa3f-4082-9aa5-8ae43547330d
+		summarizeBy: none
+		sourceColumn: dtm_prazo
+
+		variation Variation
+			isDefault
+			relationship: 04df7312-23dd-4dda-8c92-abf9b8448a05
+			defaultHierarchy: LocalDateTable_bb5866bf-24c7-4b4c-8826-6cc80210ada7.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtm_conclusao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c7a268ca-e833-446e-bad3-8011a0421a09
+		summarizeBy: none
+		sourceColumn: dtm_conclusao
+
+		variation Variation
+			isDefault
+			relationship: f47057d0-008d-42df-a9bf-d9871873ac3e
+			defaultHierarchy: LocalDateTable_b840a1b3-5284-445a-8608-04a4ae45a95f.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtm_criacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0d35e679-1cdd-4789-b6ae-fa47b277b867
+		summarizeBy: none
+		sourceColumn: dtm_criacao
+
+		variation Variation
+			isDefault
+			relationship: d59627a8-5f46-4718-b6ce-02b00400569d
+			defaultHierarchy: LocalDateTable_84ab948f-033d-44e4-b5c0-6a6b78418a2e.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtm_modificacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b98c0e39-bceb-436b-9dee-501276c4f8cd
+		summarizeBy: none
+		sourceColumn: dtm_modificacao
+
+		variation Variation
+			isDefault
+			relationship: 6bb32018-6578-4f25-aeca-a0cfa6846ba5
+			defaultHierarchy: LocalDateTable_56930915-b3cc-4cd2-b49f-99ed1b1fbfdc.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column flg_concluido
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6b709070-e015-4550-acb9-1e84b06c107f
+		summarizeBy: none
+		sourceColumn: flg_concluido
+
+		annotation SummarizationSetBy = Automatic
+
+	column flg_violado
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 4f6c0d07-e18b-4877-982c-4289560f04c7
+		summarizeBy: none
+		sourceColumn: flg_violado
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_tempo_resposta_min
+		dataType: int64
+		formatString: 0
+		lineageTag: 48de474b-729d-40f7-a313-5006eb971b83
+		summarizeBy: sum
+		sourceColumn: qtd_tempo_resposta_min
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_tempo_resposta_dias
+		dataType: double
+		lineageTag: 5751b0f0-b394-4fa3-9647-db7279f0e943
+		summarizeBy: sum
+		sourceColumn: qtd_tempo_resposta_dias
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column qtd_tempo_restante_min
+		dataType: int64
+		formatString: 0
+		lineageTag: ae2838ca-36e3-4650-a85a-ee2ed76e323a
+		summarizeBy: sum
+		sourceColumn: qtd_tempo_restante_min
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_tempo_restante_dias
+		dataType: double
+		lineageTag: d2b12ac3-c14b-4641-b16f-71d49adf27c1
+		summarizeBy: sum
+		sourceColumn: qtd_tempo_restante_dias
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column qtd_tempo_decorrido_min
+		dataType: int64
+		formatString: 0
+		lineageTag: 4d7e76d0-6d36-4160-8173-84d9707a88d0
+		summarizeBy: sum
+		sourceColumn: qtd_tempo_decorrido_min
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_tempo_decorrido_dias
+		dataType: double
+		lineageTag: c917bad0-06f1-4dec-826b-700eff81fc94
+		summarizeBy: sum
+		sourceColumn: qtd_tempo_decorrido_dias
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column qtd_tempo_pos_prazo_min
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f09f47d-c945-4670-8286-93ab42c2f92c
+		summarizeBy: sum
+		sourceColumn: qtd_tempo_pos_prazo_min
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_tempo_pos_prazo_dias
+		dataType: double
+		lineageTag: 307e33ae-76fa-412e-9c78-f4f042a64097
+		summarizeBy: sum
+		sourceColumn: qtd_tempo_pos_prazo_dias
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column dtm_carga
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2051c225-9d5d-44f0-9244-a43e75fe1475
+		summarizeBy: none
+		sourceColumn: dtm_carga
+
+		variation Variation
+			isDefault
+			relationship: 858c1c34-b639-445c-a234-2d826a2ab8a2
+			defaultHierarchy: LocalDateTable_8deaca61-b68a-45d0-819c-5d3781fb6c36.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fato_caso_milestone = m
+		mode: import
+		source =
+				let
+				    Fonte = Value.NativeQuery(DatabricksMultiCloud.Catalogs("dbc-c5a03d7d-de71.cloud.databricks.com", "/sql/1.0/warehouses/0e205169b910c570", [Catalog="atendimento", Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", Protocol=null]){[Name="atendimento",Kind="Database"]}[Data], "SELECT *#(lf)FROM atendimento.gold.fato_caso_milestone", null, [EnableFolding=true])
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,167 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "86c064a3945c2f12c01b",
+  "position": {
+    "x": 10,
+    "y": 213.33333333333334,
+    "z": 0,
+    "height": 506.66666666666669,
+    "width": 1270,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fato_caso"
+                    }
+                  },
+                  "Property": "num_sinistro"
+                }
+              },
+              "queryRef": "fato_caso.num_sinistro",
+              "nativeQueryRef": "num_sinistro"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fato_caso"
+                    }
+                  },
+                  "Property": "num_apolice"
+                }
+              },
+              "queryRef": "fato_caso.num_apolice",
+              "nativeQueryRef": "num_apolice"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fato_caso"
+                    }
+                  },
+                  "Property": "idt_caso"
+                }
+              },
+              "queryRef": "fato_caso.idt_caso",
+              "nativeQueryRef": "idt_caso"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fato_caso"
+                    }
+                  },
+                  "Property": "des_origem"
+                }
+              },
+              "queryRef": "fato_caso.des_origem",
+              "nativeQueryRef": "des_origem"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fato_caso"
+                    }
+                  },
+                  "Property": "des_procedencia"
+                }
+              },
+              "queryRef": "fato_caso.des_procedencia",
+              "nativeQueryRef": "des_procedencia"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_sf_usuario"
+                    }
+                  },
+                  "Property": "dtm_criacao"
+                }
+              },
+              "queryRef": "dim_sf_usuario.dtm_criacao",
+              "nativeQueryRef": "dtm_criacao"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fato_caso"
+                    }
+                  },
+                  "Property": "dtm_fechamento"
+                }
+              },
+              "queryRef": "fato_caso.dtm_fechamento",
+              "nativeQueryRef": "dtm_fechamento"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fato_caso"
+                    }
+                  },
+                  "Property": "des_descricao_customizada"
+                }
+              },
+              "queryRef": "fato_caso.des_descricao_customizada",
+              "nativeQueryRef": "des_descricao_customizada"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fato_caso"
+                    }
+                  },
+                  "Property": "des_solucao"
+                }
+              },
+              "queryRef": "fato_caso.des_solucao",
+              "nativeQueryRef": "des_solucao"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fato_caso"
+                  }
+                },
+                "Property": "num_apolice"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

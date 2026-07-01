@@ -1,0 +1,625 @@
+table fato_caso
+	lineageTag: ddd2556f-6960-47fb-909c-91ea88b56dcc
+
+	measure _Atendimento_Usuário =
+			CALCULATE(DISTINCTCOUNT('fato_caso'[num_caso]),
+			                        ALLEXCEPT(
+			                         'fato_caso',
+			                         'fato_caso'[idt_usuario_abertura]
+			    )
+			)
+		lineageTag: bc758f84-a774-454e-ae39-eee519eb6b89
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "AveragePerCategory"
+				}
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column idt_caso
+		dataType: string
+		lineageTag: 65d7af5c-dca7-4c44-9b40-bf1fb44ac1fd
+		summarizeBy: none
+		sourceColumn: idt_caso
+
+		annotation SummarizationSetBy = Automatic
+
+	column num_caso
+		dataType: string
+		lineageTag: ee89b915-ebdb-4f2a-bb76-b7946b0ae31e
+		summarizeBy: none
+		sourceColumn: num_caso
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_conta
+		dataType: string
+		lineageTag: 759214ac-32d9-4d5f-b438-014a00392246
+		summarizeBy: none
+		sourceColumn: idt_conta
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_contato
+		dataType: string
+		lineageTag: f262f6c2-176b-4e8a-8eb7-55b4c95b2bfe
+		summarizeBy: none
+		sourceColumn: idt_contato
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_caso_pai
+		dataType: string
+		lineageTag: 0cb2b2f0-7c26-4d63-80ba-98dac3fe2ff8
+		summarizeBy: none
+		sourceColumn: idt_caso_pai
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_apolice
+		dataType: string
+		lineageTag: f58e12b4-947a-487a-a761-bfbb873c83d5
+		summarizeBy: none
+		sourceColumn: idt_apolice
+
+		annotation SummarizationSetBy = Automatic
+
+	column num_apolice
+		dataType: string
+		lineageTag: d93e98e8-03b8-470c-a064-e0f351b40e23
+		summarizeBy: none
+		sourceColumn: num_apolice
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_usuario_criacao
+		dataType: string
+		lineageTag: 33d8854a-2335-432d-bc3f-e9cf6c7a7c39
+		summarizeBy: none
+		sourceColumn: idt_usuario_criacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_usuario_modificacao
+		dataType: string
+		lineageTag: dd27ca80-f285-412e-a775-e876a6e1deae
+		summarizeBy: none
+		sourceColumn: idt_usuario_modificacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_usuario_abertura
+		dataType: string
+		lineageTag: 0732ead3-b41f-4738-9d4d-8bb5652bfb06
+		summarizeBy: none
+		sourceColumn: idt_usuario_abertura
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_usuario_fechamento
+		dataType: string
+		lineageTag: 889d4037-fc30-4309-936c-4f284bed0bdc
+		summarizeBy: none
+		sourceColumn: idt_usuario_fechamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_status
+		dataType: string
+		lineageTag: da85bc16-9ad2-4bdb-a0ee-87c4d0ae5a8b
+		summarizeBy: none
+		sourceColumn: cod_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_status_caso
+		dataType: string
+		lineageTag: 8814d39f-e250-4a7f-9b5b-2aa43d0cad26
+		summarizeBy: none
+		sourceColumn: des_status_caso
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_prioridade
+		dataType: string
+		lineageTag: e0fc3e94-5477-43c7-901f-b0988eb49707
+		summarizeBy: none
+		sourceColumn: des_prioridade
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_origem
+		dataType: string
+		lineageTag: 8e6070c3-18d9-4a2d-99c2-6ffaf74370d6
+		summarizeBy: none
+		sourceColumn: des_origem
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_canal_entrada
+		dataType: string
+		lineageTag: 5bfe42d7-7934-4181-af6f-c6723ffaf63f
+		summarizeBy: none
+		sourceColumn: des_canal_entrada
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_tipo_caso
+		dataType: string
+		lineageTag: c35e790d-e1c6-4310-9af1-f1063af4fb08
+		summarizeBy: none
+		sourceColumn: des_tipo_caso
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_grupo_tipo
+		dataType: string
+		lineageTag: fb16d807-30d8-40a0-80f9-b7fe0660772a
+		summarizeBy: none
+		sourceColumn: des_grupo_tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_papel_contato
+		dataType: string
+		lineageTag: b89b23cb-ddc3-4652-884d-1da9ddf13ad6
+		summarizeBy: none
+		sourceColumn: des_papel_contato
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_linha_negocio
+		dataType: string
+		lineageTag: 220a28aa-969d-4e9c-bafe-06281f7cdc67
+		summarizeBy: none
+		sourceColumn: des_linha_negocio
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_fila
+		dataType: string
+		lineageTag: 22d9e525-d908-4280-84f0-10082dda7ac4
+		summarizeBy: none
+		sourceColumn: des_fila
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_fila_atendimento
+		dataType: string
+		lineageTag: 54c20e96-9856-4144-b4fc-59b143bf2eb8
+		summarizeBy: none
+		sourceColumn: des_fila_atendimento
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_motivo_caso
+		dataType: string
+		lineageTag: ae26ff46-c694-460f-8668-d55d564efd4a
+		summarizeBy: none
+		sourceColumn: des_motivo_caso
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_submotivo_caso
+		dataType: string
+		lineageTag: 1ae9001b-0071-4112-a712-62e7e35a819f
+		summarizeBy: none
+		sourceColumn: des_submotivo_caso
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_tipo_sinistro
+		dataType: string
+		lineageTag: 7c355dbf-7622-4616-96b5-9c8cb901cc46
+		summarizeBy: none
+		sourceColumn: des_tipo_sinistro
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_tipo_produto
+		dataType: string
+		lineageTag: 5623c11b-3979-4a92-965a-9dc29bfbe4c9
+		summarizeBy: none
+		sourceColumn: des_tipo_produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_status_sla_assessoria
+		dataType: string
+		lineageTag: a5afe3d0-83e7-404c-8efa-4b121b2b9415
+		summarizeBy: none
+		sourceColumn: des_status_sla_assessoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_primeira_acao_sla
+		dataType: string
+		lineageTag: 55febe66-ef9c-423b-96a5-e63f02afad0a
+		summarizeBy: none
+		sourceColumn: des_primeira_acao_sla
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_prazo
+		dataType: string
+		lineageTag: c690f12a-84ea-4c85-b724-633b0e23d037
+		summarizeBy: none
+		sourceColumn: des_prazo
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_aplicabilidade
+		dataType: string
+		lineageTag: 616c26fb-3dba-4932-be4e-7462fe7e153a
+		summarizeBy: none
+		sourceColumn: des_aplicabilidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_procedencia
+		dataType: string
+		lineageTag: fa092db7-c200-4343-a008-4237aa8d1fdc
+		summarizeBy: none
+		sourceColumn: des_procedencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column flg_sinistro
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 742a66ee-fee2-4904-8e29-906128fb2f91
+		summarizeBy: none
+		sourceColumn: flg_sinistro
+
+		annotation SummarizationSetBy = Automatic
+
+	column flg_reclamacao
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: dd148867-91e8-4d26-8e65-f3b3f88e2eaa
+		summarizeBy: none
+		sourceColumn: flg_reclamacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column flg_caso_ouvidor
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0e57bf17-7fcb-4859-8658-1f15bee91a13
+		summarizeBy: none
+		sourceColumn: flg_caso_ouvidor
+
+		annotation SummarizationSetBy = Automatic
+
+	column flg_fechado
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a04d91c4-e391-47bf-a493-86ecfea1c36f
+		summarizeBy: none
+		sourceColumn: flg_fechado
+
+		annotation SummarizationSetBy = Automatic
+
+	column flg_escalado
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b22a51a9-97ae-4b24-9f5f-5deb873853ee
+		summarizeBy: none
+		sourceColumn: flg_escalado
+
+		annotation SummarizationSetBy = Automatic
+
+	column flg_sinistro_guidewire
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 24ed8e44-d73a-47fb-a98b-2188642bcab2
+		summarizeBy: none
+		sourceColumn: flg_sinistro_guidewire
+
+		annotation SummarizationSetBy = Automatic
+
+	column flg_pessoa_fisica
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6eb9cdf2-94d1-43b7-8081-b7bc535b09f6
+		summarizeBy: none
+		sourceColumn: flg_pessoa_fisica
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_assunto
+		dataType: string
+		lineageTag: 0308925d-ff85-482d-a007-04f4258c5367
+		summarizeBy: none
+		sourceColumn: des_assunto
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_caso
+		dataType: string
+		lineageTag: 8fb75f69-642b-420d-a92d-499985e07acf
+		summarizeBy: none
+		sourceColumn: des_caso
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_descricao_customizada
+		dataType: string
+		lineageTag: 0e09a50c-f215-4396-9687-2de3e403cae5
+		summarizeBy: none
+		sourceColumn: des_descricao_customizada
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_solucao
+		dataType: string
+		lineageTag: 20135853-f899-4e7e-88fd-343ff268b566
+		summarizeBy: none
+		sourceColumn: des_solucao
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_solucao_jira
+		dataType: string
+		lineageTag: b89d735f-1243-40ad-8685-993a94f13553
+		summarizeBy: none
+		sourceColumn: des_solucao_jira
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_resolucao_chamada
+		dataType: string
+		lineageTag: b45c94ac-0853-4872-9c60-06213e175537
+		summarizeBy: none
+		sourceColumn: des_resolucao_chamada
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_motivo_rastreador
+		dataType: string
+		lineageTag: 09eaa511-ee4e-4fd3-9d76-669bed5d79a3
+		summarizeBy: none
+		sourceColumn: des_motivo_rastreador
+
+		annotation SummarizationSetBy = Automatic
+
+	column num_sinistro
+		dataType: string
+		lineageTag: 4645ee47-5c6b-461d-ad24-ff113b4098d6
+		summarizeBy: none
+		sourceColumn: num_sinistro
+
+		annotation SummarizationSetBy = Automatic
+
+	column num_ticket_jira
+		dataType: string
+		lineageTag: 57c94bc9-0ab5-4ea3-8227-0375d2b73bc6
+		summarizeBy: none
+		sourceColumn: num_ticket_jira
+
+		annotation SummarizationSetBy = Automatic
+
+	column nom_contato
+		dataType: string
+		lineageTag: a676bd6d-b17f-4bc3-9796-cd7081ae4010
+		summarizeBy: none
+		sourceColumn: nom_contato
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_telefones_cliente
+		dataType: string
+		lineageTag: e527f494-3c1d-4c92-8991-168f405a407c
+		summarizeBy: none
+		sourceColumn: des_telefones_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_email_cliente
+		dataType: string
+		lineageTag: 539afcbd-7d79-438e-a960-b7ff5487c5d6
+		summarizeBy: none
+		sourceColumn: cod_email_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_endereco_cliente
+		dataType: string
+		lineageTag: d64f0f86-bd6a-4d59-bfe1-87c632c931d3
+		summarizeBy: none
+		sourceColumn: des_endereco_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_empresa_proprietario
+		dataType: string
+		lineageTag: 4edaff69-a794-44a7-b809-34be0100a409
+		summarizeBy: none
+		sourceColumn: des_empresa_proprietario
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_link_interacoes_ura
+		dataType: string
+		lineageTag: 07cc3e1b-6a9b-4288-82c2-0d6ee63da721
+		summarizeBy: none
+		sourceColumn: des_link_interacoes_ura
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_tipo_seguro
+		dataType: string
+		lineageTag: c8a6d96c-d76b-4bb6-a25d-00a0e629f2d8
+		summarizeBy: none
+		sourceColumn: des_tipo_seguro
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_status_apolice
+		dataType: string
+		lineageTag: 3bfa8161-b6e2-4d34-bc64-58e040ebd767
+		summarizeBy: none
+		sourceColumn: des_status_apolice
+
+		annotation SummarizationSetBy = Automatic
+
+	column dat_inicio_vigencia_apolice
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 05f377ca-d25b-41b3-b407-436e6dd898df
+		summarizeBy: none
+		sourceColumn: dat_inicio_vigencia_apolice
+
+		variation Variation
+			isDefault
+			relationship: 07b8055c-43b0-470d-ac8e-e98cd55204b3
+			defaultHierarchy: LocalDateTable_194ca3e3-e36f-4526-b49c-696d584a698d.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column dat_fim_vigencia_apolice
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 52541af6-d068-4b69-a198-f9ffa9accd58
+		summarizeBy: none
+		sourceColumn: dat_fim_vigencia_apolice
+
+		variation Variation
+			isDefault
+			relationship: b0bbc4a5-4194-465a-8e58-8e5cedc28a3c
+			defaultHierarchy: LocalDateTable_d4e35024-8af1-49cb-8e4e-46aa5b4c202c.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column qtd_comentarios
+		dataType: int64
+		formatString: 0
+		lineageTag: 8e361585-f2ad-4dec-9dae-7e67d6cc50d4
+		summarizeBy: sum
+		sourceColumn: qtd_comentarios
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_milestones
+		dataType: int64
+		formatString: 0
+		lineageTag: ba1e74ac-7c04-491f-a0c7-318c05af22e3
+		summarizeBy: sum
+		sourceColumn: qtd_milestones
+
+		annotation SummarizationSetBy = Automatic
+
+	column flg_sla_violado
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5b527c51-323e-4bcf-b7ff-2cad88470a8f
+		summarizeBy: none
+		sourceColumn: flg_sla_violado
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_dias_resolucao
+		dataType: int64
+		formatString: 0
+		lineageTag: 9921bc56-fd84-4606-bbb6-ec0b79f7eade
+		summarizeBy: sum
+		sourceColumn: qtd_dias_resolucao
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtm_criacao
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 6822f89a-7d08-4f4b-bca4-7bf2dac8bd2a
+		summarizeBy: none
+		sourceColumn: dtm_criacao
+
+		variation Variation
+			isDefault
+			relationship: cd1a42b1-3696-4028-9ff8-ae944e9fbc48
+			defaultHierarchy: LocalDateTable_d956f1b8-83aa-4835-96f3-09e1b5cf94d1.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtm_fechamento
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b27e9a38-d770-4ea2-9c46-ae304e5c95ea
+		summarizeBy: none
+		sourceColumn: dtm_fechamento
+
+		variation Variation
+			isDefault
+			relationship: b9d0637d-63d9-4519-bbfa-bf1f47f582a5
+			defaultHierarchy: LocalDateTable_a584e338-9d54-4628-8a9c-18ae2d59d214.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtm_vencimento_sla
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6fcf5026-4dcf-4be5-bc4e-5d811b223a25
+		summarizeBy: none
+		sourceColumn: dtm_vencimento_sla
+
+		variation Variation
+			isDefault
+			relationship: f8c2f9c9-d4cf-43d5-835a-e8ab39b1ae03
+			defaultHierarchy: LocalDateTable_632aef17-5c38-411e-a274-9f3f71d3a7b1.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtm_sincronizacao_jira
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f707f7c8-daea-4c05-bd00-aacb3f87dd95
+		summarizeBy: none
+		sourceColumn: dtm_sincronizacao_jira
+
+		variation Variation
+			isDefault
+			relationship: 0396acd5-884b-4949-bcb3-1e22d79d1057
+			defaultHierarchy: LocalDateTable_12b90385-a086-45aa-b24a-afc51f41e462.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtm_modificacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d3695108-206a-4810-b06a-b361ba75592a
+		summarizeBy: none
+		sourceColumn: dtm_modificacao
+
+		variation Variation
+			isDefault
+			relationship: 23a73575-e337-4977-bdea-695bec85ea1c
+			defaultHierarchy: LocalDateTable_eca4118f-4ef9-4481-b78d-be021b738afc.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Usuario_abertura = RELATED(dim_sf_usuario[cod_email])
+		lineageTag: 6a9a191d-acd0-4f10-a951-1ba8a5a9565f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fato_caso = m
+		mode: import
+		source =
+				let
+				    Fonte = Value.NativeQuery(DatabricksMultiCloud.Catalogs("dbc-c5a03d7d-de71.cloud.databricks.com", "/sql/1.0/warehouses/0e205169b910c570", [Catalog="atendimento", Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", Protocol=null]){[Name="atendimento",Kind="Database"]}[Data], "SELECT *#(lf)FROM atendimento.gold.fato_caso", null, [EnableFolding=true])
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

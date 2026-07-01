@@ -1,0 +1,55 @@
+table 'Medidas_Volumetria Geral (Protocolos e Tipos)'
+	lineageTag: 00b4e20d-d11f-4864-b456-d02b69a1a72b
+
+	measure 'Total Casos' = DISTINCTCOUNT(fato_caso[idt_caso])
+		formatString: #,0
+		lineageTag: f0e06380-b2ce-434a-9fdd-4c98b11c7c74
+
+	measure 'Vol. Reclamacoes' =
+			
+			CALCULATE(
+			    [Total Casos],
+			    fato_caso[des_grupo_tipo] = "Reclamação"
+			)
+		formatString: #,0
+		lineageTag: fc3927be-6790-4bfc-bd27-10f2decd1283
+
+	measure 'Vol. Solicitacoes' =
+			
+			CALCULATE(
+			    [Total Casos],
+			    fato_caso[des_grupo_tipo] = "Solicitação"
+			)
+		formatString: #,0
+		lineageTag: 53ee2742-fe89-47c9-958f-93393259ecb7
+
+	measure 'Total Casos Abandono' = CALCULATE(DISTINCTCOUNT(fato_caso[idt_caso]),fato_caso[des_fila_atendimento] = "BackOffice Atendimento Abandono")
+		formatString: #,0
+		lineageTag: 58729b53-f041-48f9-bf50-de6c2d019056
+
+	measure '% Abandono' = ```
+			
+			DIVIDE(
+			    [Total Casos Abandono], 
+			    [Total Casos], 
+			    0
+			)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: b272ecb9-12ad-4462-8ec3-87353409a908
+
+	partition 'Medidas_Volumetria Geral (Protocolos e Tipos)' = m
+		mode: import
+		source =
+				let
+				  Origem = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Colunas Removidas" = Table.RemoveColumns(Origem,{"Coluna 1"})
+				in
+				  #"Colunas Removidas"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

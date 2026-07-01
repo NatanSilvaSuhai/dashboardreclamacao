@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "affb0ed9e0a2ecddc318",
+  "position": {
+    "x": 663.88361796331435,
+    "y": 463.09930423782419,
+    "z": 5000,
+    "height": 218.59582542694497,
+    "width": 216.9765970904491,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fato_caso"
+                    }
+                  },
+                  "Property": "des_motivo_caso"
+                }
+              },
+              "queryRef": "fato_caso.des_motivo_caso",
+              "nativeQueryRef": "des_motivo_caso",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Basic'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

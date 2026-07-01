@@ -1,0 +1,218 @@
+table dim_sf_usuario
+	lineageTag: 7662ee65-8749-4908-adba-7b301205e5b6
+
+	column idt_usuario
+		dataType: string
+		lineageTag: 330524ab-0df1-4745-b7f3-d6abc1595be7
+		summarizeBy: none
+		sourceColumn: idt_usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_perfil
+		dataType: string
+		lineageTag: db3a95ff-dce7-4961-bc8d-ff24884c7cc7
+		summarizeBy: none
+		sourceColumn: idt_perfil
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_papel
+		dataType: string
+		lineageTag: 53f0d041-42a5-4d5f-8be8-82c02d95c46e
+		summarizeBy: none
+		sourceColumn: idt_papel
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_gestor
+		dataType: string
+		lineageTag: 3231d45d-e294-4a1b-80fb-6f6aa4071256
+		summarizeBy: none
+		sourceColumn: idt_gestor
+
+		annotation SummarizationSetBy = Automatic
+
+	column nom_completo_usuario
+		dataType: string
+		lineageTag: 3ba5782b-d225-4a7a-bf5b-62ce70ea99d6
+		summarizeBy: none
+		sourceColumn: nom_completo_usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column nom_usuario
+		dataType: string
+		lineageTag: e8b010b9-0ea7-4141-8e96-9c163b39bcfa
+		summarizeBy: none
+		sourceColumn: nom_usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column nom_sobrenome
+		dataType: string
+		lineageTag: 6acd7ae1-9a82-4eba-b0c7-0f3cbc018dea
+		summarizeBy: none
+		sourceColumn: nom_sobrenome
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_username
+		dataType: string
+		lineageTag: d55b5f31-8a40-4ffd-92d9-5aef28534958
+		summarizeBy: none
+		sourceColumn: cod_username
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_alias
+		dataType: string
+		lineageTag: c31e6c00-52fa-4a78-9a14-ee4c623d568f
+		summarizeBy: none
+		sourceColumn: cod_alias
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_email
+		dataType: string
+		lineageTag: 96547667-7fd9-4e47-93d6-1a46652cc81b
+		summarizeBy: none
+		sourceColumn: cod_email
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_tipo_usuario
+		dataType: string
+		lineageTag: e4810a2b-bae5-4d5a-92a6-3c7662cf1f15
+		summarizeBy: none
+		sourceColumn: cod_tipo_usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_titulo
+		dataType: string
+		lineageTag: 72beb9c8-d56a-433f-8ac2-05766a6621e2
+		summarizeBy: none
+		sourceColumn: des_titulo
+
+		annotation SummarizationSetBy = Automatic
+
+	column nom_departamento
+		dataType: string
+		lineageTag: 639826c0-452f-4d9c-a5e5-d896ffd9354d
+		summarizeBy: none
+		sourceColumn: nom_departamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_divisao_cc
+		dataType: string
+		lineageTag: e1094992-0e81-49f7-b4d2-0cf7cc71747b
+		summarizeBy: none
+		sourceColumn: cod_divisao_cc
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_empresa
+		dataType: string
+		lineageTag: 2a05e638-9830-44d8-a5cb-11eafabf785e
+		summarizeBy: none
+		sourceColumn: des_empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column flg_ativo
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 566e1833-9af4-443e-bfe4-981ae183e4a1
+		summarizeBy: none
+		sourceColumn: flg_ativo
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtm_ultimo_login
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e44a308d-1cb0-4489-8458-1d90d0e96a21
+		summarizeBy: none
+		sourceColumn: dtm_ultimo_login
+
+		variation Variation
+			isDefault
+			relationship: 48791635-9de3-4839-aa58-02d85bfc59a0
+			defaultHierarchy: LocalDateTable_b0960c25-e066-468d-a3dc-9ed6e435bf5c.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtm_criacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f2786c1f-fb64-4a9e-87f5-140cc0f75d47
+		summarizeBy: none
+		sourceColumn: dtm_criacao
+
+		variation Variation
+			isDefault
+			relationship: 631c51d0-93ee-426c-8dda-9e9c02e5ddf4
+			defaultHierarchy: LocalDateTable_acf8a8dd-e4e5-4d28-af13-ebc2da468e05.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtm_modificacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3f4e0cb7-d5e4-44cb-b74c-01ff02784aaf
+		summarizeBy: none
+		sourceColumn: dtm_modificacao
+
+		variation Variation
+			isDefault
+			relationship: 233d3bad-8879-48f1-928d-a40e512eb50e
+			defaultHierarchy: LocalDateTable_44418543-b671-42fb-a447-43308715e60b.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column nom_papel_usuario
+		dataType: string
+		lineageTag: f10f829b-2132-485b-95de-b1a086c7c4d8
+		summarizeBy: none
+		sourceColumn: nom_papel_usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_papel_usuario
+		dataType: string
+		lineageTag: e5dd90ac-7154-4273-9dc7-4f6a53aa2d57
+		summarizeBy: none
+		sourceColumn: cod_papel_usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_papel_usuario
+		dataType: string
+		lineageTag: f4ee539a-1913-4849-9331-85fa7a8d67a1
+		summarizeBy: none
+		sourceColumn: des_papel_usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_nivel_acesso_usuario
+		dataType: string
+		lineageTag: 0bf2fa8f-45cd-42cb-b494-70020c136393
+		summarizeBy: none
+		sourceColumn: cod_nivel_acesso_usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_sf_usuario = m
+		mode: import
+		source =
+				let
+				    Fonte = Value.NativeQuery(DatabricksMultiCloud.Catalogs("dbc-c5a03d7d-de71.cloud.databricks.com", "/sql/1.0/warehouses/0e205169b910c570", [Catalog="atendimento", Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", Protocol=null]){[Name="atendimento",Kind="Database"]}[Data], "SELECT *#(lf)FROM atendimento.gold.dim_sf_usuario", null, [EnableFolding=true])
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

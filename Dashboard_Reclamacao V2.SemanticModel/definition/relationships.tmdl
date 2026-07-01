@@ -1,0 +1,107 @@
+relationship 07b8055c-43b0-470d-ac8e-e98cd55204b3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_caso.dat_inicio_vigencia_apolice
+	toColumn: LocalDateTable_194ca3e3-e36f-4526-b49c-696d584a698d.Date
+
+relationship b0bbc4a5-4194-465a-8e58-8e5cedc28a3c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_caso.dat_fim_vigencia_apolice
+	toColumn: LocalDateTable_d4e35024-8af1-49cb-8e4e-46aa5b4c202c.Date
+
+relationship cd1a42b1-3696-4028-9ff8-ae944e9fbc48
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_caso.dtm_criacao
+	toColumn: LocalDateTable_d956f1b8-83aa-4835-96f3-09e1b5cf94d1.Date
+
+relationship b9d0637d-63d9-4519-bbfa-bf1f47f582a5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_caso.dtm_fechamento
+	toColumn: LocalDateTable_a584e338-9d54-4628-8a9c-18ae2d59d214.Date
+
+relationship f8c2f9c9-d4cf-43d5-835a-e8ab39b1ae03
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_caso.dtm_vencimento_sla
+	toColumn: LocalDateTable_632aef17-5c38-411e-a274-9f3f71d3a7b1.Date
+
+relationship 0396acd5-884b-4949-bcb3-1e22d79d1057
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_caso.dtm_sincronizacao_jira
+	toColumn: LocalDateTable_12b90385-a086-45aa-b24a-afc51f41e462.Date
+
+relationship 23a73575-e337-4977-bdea-695bec85ea1c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_caso.dtm_modificacao
+	toColumn: LocalDateTable_eca4118f-4ef9-4481-b78d-be021b738afc.Date
+
+relationship e7c3c6cc-e1df-476a-abfc-ad6241aac7e5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_caso_comentario.dtm_criacao
+	toColumn: LocalDateTable_1de4e9be-7b26-4493-b76b-cdb18682b464.Date
+
+relationship 2e9509ec-8bf8-4de7-ab98-c45da7aa974b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_caso_comentario.dtm_modificacao
+	toColumn: LocalDateTable_b0ab856c-2ffb-4935-b7ee-2d00e29dc01b.Date
+
+relationship 8b75d1b6-58d9-4e28-a516-397e2535e0e4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_caso_comentario.dtm_carga
+	toColumn: LocalDateTable_f92ca596-ce40-4fb7-8c7a-5c14f9956215.Date
+
+relationship 1a71861c-813f-4023-8b15-472cc9b89d7c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_caso_milestone.dtm_inicio
+	toColumn: LocalDateTable_e3345fb9-e5a2-424b-96e2-a415fe71dde7.Date
+
+relationship 04df7312-23dd-4dda-8c92-abf9b8448a05
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_caso_milestone.dtm_prazo
+	toColumn: LocalDateTable_bb5866bf-24c7-4b4c-8826-6cc80210ada7.Date
+
+relationship f47057d0-008d-42df-a9bf-d9871873ac3e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_caso_milestone.dtm_conclusao
+	toColumn: LocalDateTable_b840a1b3-5284-445a-8608-04a4ae45a95f.Date
+
+relationship d59627a8-5f46-4718-b6ce-02b00400569d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_caso_milestone.dtm_criacao
+	toColumn: LocalDateTable_84ab948f-033d-44e4-b5c0-6a6b78418a2e.Date
+
+relationship 6bb32018-6578-4f25-aeca-a0cfa6846ba5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_caso_milestone.dtm_modificacao
+	toColumn: LocalDateTable_56930915-b3cc-4cd2-b49f-99ed1b1fbfdc.Date
+
+relationship 858c1c34-b639-445c-a234-2d826a2ab8a2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_caso_milestone.dtm_carga
+	toColumn: LocalDateTable_8deaca61-b68a-45d0-819c-5d3781fb6c36.Date
+
+relationship AutoDetected_46acf53a-07bc-40b4-be44-60f7b6f9990a
+	fromColumn: fato_caso_comentario.idt_caso
+	toColumn: fato_caso.idt_caso
+
+relationship AutoDetected_141b643c-dcbe-41a4-ae4a-b8b2469c4d8a
+	fromColumn: fato_caso_milestone.idt_caso
+	toColumn: fato_caso.idt_caso
+
+relationship 48791635-9de3-4839-aa58-02d85bfc59a0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_sf_usuario.dtm_ultimo_login
+	toColumn: LocalDateTable_b0960c25-e066-468d-a3dc-9ed6e435bf5c.Date
+
+relationship 631c51d0-93ee-426c-8dda-9e9c02e5ddf4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_sf_usuario.dtm_criacao
+	toColumn: LocalDateTable_acf8a8dd-e4e5-4d28-af13-ebc2da468e05.Date
+
+relationship 233d3bad-8879-48f1-928d-a40e512eb50e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_sf_usuario.dtm_modificacao
+	toColumn: LocalDateTable_44418543-b671-42fb-a447-43308715e60b.Date
+
+relationship 4cdb760f-dbb7-c6ed-3d6a-b4b0e5af439a
+	fromColumn: fato_caso.idt_usuario_abertura
+	toColumn: dim_sf_usuario.idt_usuario
+

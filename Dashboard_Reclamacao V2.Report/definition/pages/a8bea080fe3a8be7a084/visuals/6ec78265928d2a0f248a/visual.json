@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "6ec78265928d2a0f248a",
+  "position": {
+    "x": 561.42857142857144,
+    "y": 398.57142857142861,
+    "z": 7000,
+    "height": 154.28571428571431,
+    "width": 718.57142857142867,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fato_caso"
+                    }
+                  },
+                  "Property": "des_papel_contato"
+                }
+              },
+              "queryRef": "fato_caso.des_papel_contato",
+              "nativeQueryRef": "des_papel_contato",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas_Volumetria Geral (Protocolos e Tipos)"
+                    }
+                  },
+                  "Property": "Total Casos"
+                }
+              },
+              "queryRef": "Medidas_Volumetria Geral (Protocolos e Tipos).Total Casos",
+              "nativeQueryRef": "Total Casos"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas_Volumetria Geral (Protocolos e Tipos)"
+                  }
+                },
+                "Property": "Total Casos"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "1fdf0c8875f046c73fda",
+  "position": {
+    "x": 0,
+    "y": 552.85714285714289,
+    "z": 5000,
+    "height": 154.28571428571431,
+    "width": 1280,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fato_caso"
+                    }
+                  },
+                  "Property": "des_motivo_caso"
+                }
+              },
+              "queryRef": "fato_caso.des_motivo_caso",
+              "nativeQueryRef": "des_motivo_caso",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas_Volumetria Geral (Protocolos e Tipos)"
+                    }
+                  },
+                  "Property": "Total Casos"
+                }
+              },
+              "queryRef": "Medidas_Volumetria Geral (Protocolos e Tipos).Total Casos",
+              "nativeQueryRef": "Total Casos"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas_Volumetria Geral (Protocolos e Tipos)"
+                  }
+                },
+                "Property": "Total Casos"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

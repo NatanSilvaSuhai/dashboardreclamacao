@@ -1,0 +1,44 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["fato_caso","fato_caso_comentario","fato_caso_milestone","dim_sf_usuario","Medidas_Volumetria Geral (Protocolos e Tipos)","Medidas_Procedência e Qualidade","Medidas_SLAs_PrazosResposta"]
+
+annotation PBI_ProTooling = ["TMDLView_Desktop","DevMode"]
+
+ref table fato_caso
+ref table DateTableTemplate_db2fab1b-0833-44be-9f0e-cb757713441e
+ref table LocalDateTable_194ca3e3-e36f-4526-b49c-696d584a698d
+ref table LocalDateTable_d4e35024-8af1-49cb-8e4e-46aa5b4c202c
+ref table LocalDateTable_d956f1b8-83aa-4835-96f3-09e1b5cf94d1
+ref table LocalDateTable_a584e338-9d54-4628-8a9c-18ae2d59d214
+ref table LocalDateTable_632aef17-5c38-411e-a274-9f3f71d3a7b1
+ref table LocalDateTable_12b90385-a086-45aa-b24a-afc51f41e462
+ref table LocalDateTable_eca4118f-4ef9-4481-b78d-be021b738afc
+ref table fato_caso_comentario
+ref table LocalDateTable_1de4e9be-7b26-4493-b76b-cdb18682b464
+ref table LocalDateTable_b0ab856c-2ffb-4935-b7ee-2d00e29dc01b
+ref table LocalDateTable_f92ca596-ce40-4fb7-8c7a-5c14f9956215
+ref table fato_caso_milestone
+ref table LocalDateTable_e3345fb9-e5a2-424b-96e2-a415fe71dde7
+ref table LocalDateTable_bb5866bf-24c7-4b4c-8826-6cc80210ada7
+ref table LocalDateTable_b840a1b3-5284-445a-8608-04a4ae45a95f
+ref table LocalDateTable_84ab948f-033d-44e4-b5c0-6a6b78418a2e
+ref table LocalDateTable_56930915-b3cc-4cd2-b49f-99ed1b1fbfdc
+ref table LocalDateTable_8deaca61-b68a-45d0-819c-5d3781fb6c36
+ref table dim_sf_usuario
+ref table LocalDateTable_b0960c25-e066-468d-a3dc-9ed6e435bf5c
+ref table LocalDateTable_acf8a8dd-e4e5-4d28-af13-ebc2da468e05
+ref table LocalDateTable_44418543-b671-42fb-a447-43308715e60b
+ref table 'Medidas_Volumetria Geral (Protocolos e Tipos)'
+ref table 'Medidas_Procedência e Qualidade'
+ref table Medidas_SLAs_PrazosResposta
+
+ref cultureInfo pt-BR
+

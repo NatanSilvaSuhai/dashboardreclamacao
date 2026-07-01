@@ -1,0 +1,127 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "267646fda69904cb1cf0",
+  "position": {
+    "x": 0,
+    "y": 162.85714285714286,
+    "z": 2000,
+    "height": 81.428571428571431,
+    "width": 1280,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "multiRowCard",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas_SLAs_PrazosResposta"
+                    }
+                  },
+                  "Property": "% Atingimento SLA"
+                }
+              },
+              "queryRef": "Medidas_SLAs_PrazosResposta.% Atingimento SLA",
+              "nativeQueryRef": "% Atingimento SLA"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas_SLAs_PrazosResposta"
+                    }
+                  },
+                  "Property": "Tempo Médio de Resolução (Dias)"
+                }
+              },
+              "queryRef": "Medidas_SLAs_PrazosResposta.Tempo_Medio (Dias)",
+              "nativeQueryRef": "Tempo Médio de Resolução (Dias)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas_SLAs_PrazosResposta"
+                    }
+                  },
+                  "Property": "Tempo Médio de Atendimento (Min)"
+                }
+              },
+              "queryRef": "Medidas_SLAs_PrazosResposta.Tempo Medio Primeira Resposta (Min)",
+              "nativeQueryRef": "Tempo Médio de Atendimento (Min)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas_SLAs_PrazosResposta"
+                    }
+                  },
+                  "Property": "Casos no Prazo"
+                }
+              },
+              "queryRef": "Medidas_SLAs_PrazosResposta.Casos no Prazo",
+              "nativeQueryRef": "Casos no Prazo"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas_SLAs_PrazosResposta"
+                    }
+                  },
+                  "Property": "Casos SLA Violado"
+                }
+              },
+              "queryRef": "Medidas_SLAs_PrazosResposta.Casos SLA Violado",
+              "nativeQueryRef": "Casos SLA Violado"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas_SLAs_PrazosResposta"
+                  }
+                },
+                "Property": "% Atingimento SLA"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "dataLabels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

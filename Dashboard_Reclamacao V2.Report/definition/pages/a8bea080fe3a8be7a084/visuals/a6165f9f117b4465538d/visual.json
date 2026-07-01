@@ -1,0 +1,113 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "a6165f9f117b4465538d",
+  "position": {
+    "x": 0,
+    "y": 81.428571428571431,
+    "z": 1000,
+    "height": 81.428571428571431,
+    "width": 844.28571428571433,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "multiRowCard",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas_Procedência e Qualidade"
+                    }
+                  },
+                  "Property": "Casos Procedentes"
+                }
+              },
+              "queryRef": "Medidas_Procedência e Qualidade.Casos Procedentes",
+              "nativeQueryRef": "Casos Procedentes"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas_Procedência e Qualidade"
+                    }
+                  },
+                  "Property": "Casos Improcedentes"
+                }
+              },
+              "queryRef": "Medidas_Procedência e Qualidade.Casos Improcedentes",
+              "nativeQueryRef": "Casos Improcedentes"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas_Procedência e Qualidade"
+                    }
+                  },
+                  "Property": "% Procedencia"
+                }
+              },
+              "queryRef": "Medidas_Procedência e Qualidade.% Procedencia",
+              "nativeQueryRef": "% Procedencia"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas_Procedência e Qualidade"
+                    }
+                  },
+                  "Property": "% Improcedencia"
+                }
+              },
+              "queryRef": "Medidas_Procedência e Qualidade.% Improcedencia",
+              "nativeQueryRef": "% Improcedencia"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas_Procedência e Qualidade"
+                  }
+                },
+                "Property": "Casos Procedentes"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "dataLabels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,106 @@
+table fato_caso_comentario
+	lineageTag: 0479f4c1-0cf0-4f9f-8290-6e0ca53883ad
+
+	column idt_comentario
+		dataType: string
+		lineageTag: de60613f-cb6c-4ce3-9d12-3af19d1133a4
+		summarizeBy: none
+		sourceColumn: idt_comentario
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_caso
+		dataType: string
+		lineageTag: f994c977-0e66-4ee8-8842-a81cf155e475
+		summarizeBy: none
+		sourceColumn: idt_caso
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_usuario_criacao
+		dataType: string
+		lineageTag: 31e98af9-8cbf-4129-8b77-89e5d4308a52
+		summarizeBy: none
+		sourceColumn: idt_usuario_criacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column idt_usuario_modificacao
+		dataType: string
+		lineageTag: 16aaa243-d4ba-48ad-94c8-b8f78473956f
+		summarizeBy: none
+		sourceColumn: idt_usuario_modificacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column des_comentario
+		dataType: string
+		lineageTag: 41ae2bd2-4265-4ac6-b58f-e6c18773e2c7
+		summarizeBy: none
+		sourceColumn: des_comentario
+
+		annotation SummarizationSetBy = Automatic
+
+	column flg_publicado
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a9d6c570-d8d5-44fb-b0bb-0615f37acad8
+		summarizeBy: none
+		sourceColumn: flg_publicado
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtm_criacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: bafff10d-ea02-4cb1-92db-327c6e13913f
+		summarizeBy: none
+		sourceColumn: dtm_criacao
+
+		variation Variation
+			isDefault
+			relationship: e7c3c6cc-e1df-476a-abfc-ad6241aac7e5
+			defaultHierarchy: LocalDateTable_1de4e9be-7b26-4493-b76b-cdb18682b464.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtm_modificacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7794db23-56c9-493c-9d0b-a5043faa4ec3
+		summarizeBy: none
+		sourceColumn: dtm_modificacao
+
+		variation Variation
+			isDefault
+			relationship: 2e9509ec-8bf8-4de7-ab98-c45da7aa974b
+			defaultHierarchy: LocalDateTable_b0ab856c-2ffb-4935-b7ee-2d00e29dc01b.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtm_carga
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c986309b-e42a-4c22-94d2-c1e612973ad0
+		summarizeBy: none
+		sourceColumn: dtm_carga
+
+		variation Variation
+			isDefault
+			relationship: 8b75d1b6-58d9-4e28-a516-397e2535e0e4
+			defaultHierarchy: LocalDateTable_f92ca596-ce40-4fb7-8c7a-5c14f9956215.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fato_caso_comentario = m
+		mode: import
+		source =
+				let
+				    Fonte = Value.NativeQuery(DatabricksMultiCloud.Catalogs("dbc-c5a03d7d-de71.cloud.databricks.com", "/sql/1.0/warehouses/0e205169b910c570", [Catalog="atendimento", Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", Protocol=null]){[Name="atendimento",Kind="Database"]}[Data], "SELECT *#(lf)FROM atendimento.gold.fato_caso_comentario", null, [EnableFolding=true])
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

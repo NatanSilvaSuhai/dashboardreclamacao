@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "37237cdfa22bac4840eb",
+  "position": {
+    "x": 585.71428571428578,
+    "y": 244.28571428571431,
+    "z": 6000,
+    "height": 154.28571428571431,
+    "width": 694.28571428571433,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fato_caso"
+                    }
+                  },
+                  "Property": "des_fila_atendimento"
+                }
+              },
+              "queryRef": "fato_caso.des_fila_atendimento",
+              "nativeQueryRef": "des_fila_atendimento",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas_Volumetria Geral (Protocolos e Tipos)"
+                    }
+                  },
+                  "Property": "Total Casos"
+                }
+              },
+              "queryRef": "Medidas_Volumetria Geral (Protocolos e Tipos).Total Casos",
+              "nativeQueryRef": "Total Casos"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas_Volumetria Geral (Protocolos e Tipos)"
+                  }
+                },
+                "Property": "Total Casos"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

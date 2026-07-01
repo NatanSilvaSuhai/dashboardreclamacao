@@ -1,0 +1,55 @@
+table Medidas_SLAs_PrazosResposta
+	lineageTag: 976d02fe-427e-4bc2-9c71-3f57196c7904
+
+	measure 'Casos no Prazo' = ```
+			
+			CALCULATE(
+			    [Total Casos],
+			    fato_caso[flg_sla_violado] = FALSE 
+			)
+			```
+		formatString: #,0
+		lineageTag: f09c9a63-04ce-4ea7-a8c0-f605b26f2b11
+
+	measure 'Casos SLA Violado' = ```
+			
+			CALCULATE(
+			    [Total Casos],
+			    fato_caso[flg_sla_violado] = TRUE 
+			)
+			```
+		formatString: #,0
+		lineageTag: 3765744e-36cc-4680-b58d-e04642edf84c
+
+	measure '% Atingimento SLA' = DIVIDE([Casos no Prazo], [Total Casos], 0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 43be00ce-9368-43ef-8d7e-4520c4d4e13f
+
+	measure 'Tempo Médio de Resolução (Dias)' = AVERAGE(fato_caso[qtd_dias_resolucao])
+		lineageTag: bcc1ff7a-99e8-46a1-a3ba-c8f29785cf9b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Tempo Médio de Atendimento (Min)' =
+			
+			CALCULATE(
+			    AVERAGE(fato_caso_milestone[qtd_tempo_resposta_min]),
+			    fato_caso_milestone[nom_tipo_milestone] = "Primeira Resposta"
+			)
+		lineageTag: 3c7a220e-6963-40da-ab07-623ee401a944
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Medidas_SLAs_PrazosResposta = m
+		mode: import
+		source =
+				let
+				  Origem = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Colunas Removidas" = Table.RemoveColumns(Origem,{"Coluna 1"})
+				in
+				  #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
